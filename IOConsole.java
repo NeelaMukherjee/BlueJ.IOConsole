@@ -32,6 +32,8 @@ public class IOConsole {
      */
     public void print(String val, Object... args) {
         out.format(val, args);
+        
+        System.out.print(val);
     }
 
     /**
@@ -39,6 +41,8 @@ public class IOConsole {
      * @param args : optional arguments to send for string formatting
      */
     public void println(String val, Object... args) {
+        out.format(val + "%n", args);
+        System.out.printf("%s",val);
     }
 
     /**
@@ -46,8 +50,9 @@ public class IOConsole {
      * @param args   : optional arguments to send for string formatting
      * @return user's input as String
      */
-    public String getStringInput(String prompt, Object... args) {
-        return null;
+    public String getStringInput(String prompt) {
+        //out.format(prompt,args);
+        return prompt;
     }
 
     /**
@@ -55,8 +60,8 @@ public class IOConsole {
      * @param args   : optional arguments to send for string formatting
      * @return user's input as integer
      */
-    public Integer getIntegerInput(String prompt, Object... args) {
-        return null;
+    public Integer getIntegerInput(Integer prompt, Object... args) {
+        return prompt;
     }
 
     /**
@@ -64,8 +69,8 @@ public class IOConsole {
      * @param args   : optional arguments to send for string formatting
      * @return user's input as double
      */
-    public Double getDoubleInput(String prompt, Object... args) {
-        return null;
+    public Double getDoubleInput(Double prompt, Object... args) {
+        return prompt;
     }
 
     /**
@@ -73,8 +78,8 @@ public class IOConsole {
      * @param args   : optional arguments to send for string formatting
      * @return user's input as float
      */
-    public Float getFloatInput(String prompt, Object... args) {
-        return null;
+    public Float getFloatInput(Float prompt, Object... args) {
+        return prompt;
     }
 
     /**
@@ -82,7 +87,7 @@ public class IOConsole {
      * @param args   : optional arguments to send for string formatting
      * @return user's input as long
      */
-    public Long getLongInput(String prompt, Object... args) {
-        return null;
+    public Long getLongInput(Long prompt) {
+        return prompt;
     }
 }
